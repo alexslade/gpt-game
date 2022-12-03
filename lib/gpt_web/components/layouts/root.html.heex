@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
     <.live_title suffix=" · Phoenix Framework">
-      <%= assigns[:page_title] || "Gpt" %>
+      <%= assigns[:page_title] || "Gpt Game" %>
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
@@ -15,5 +15,8 @@
     <div class="border mx-auto max-w-sm p-4">
       <%= @inner_content %>
     </div>
+    <footer class="mt-4 mx-auto max-w-sm text-gray-600 text-sm">
+      This is a ChatGPT experiment from Alex Slade. 100% of this code (Elixir + LiveView) has been written using ChatGPT prompts. You can read more in <a href="https://thetinycto.com/blog/writing-a-game-using-chatgpt" class="text-teal-500 hover:text-teal-700">the writeup</a>.
+    </footer>
   </body>
 </html>
