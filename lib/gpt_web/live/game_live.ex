@@ -4,9 +4,9 @@ defmodule GptWeb.GameLive do
   def render(assigns) do
     ~L"""
     <div>
-      <h1>GPT: Graveyards, Pits & Treasure</h1>
-      <p>Gems: <%= @gems %></p>
-      <button phx-click="dig_up_grave" <%= if @dead, do: "disabled", else: "" %>>
+      <h1 class="font-bold">GPT: Graveyards, Pits & Treasure</h1>
+      <p class="mt-2 mb-4">Gems: <%= @gems %></p>
+      <button phx-click="dig_up_grave" class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded <%= if @dead, do: "opacity-50", else: "" %>" <%= if @dead, do: "disabled", else: "" %>>
         Dig up the next grave?
       </button>
     </div>
