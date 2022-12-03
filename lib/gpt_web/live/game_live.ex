@@ -24,6 +24,6 @@ defmodule GptWeb.GameLive do
   end
 
   defp random_bool do
-    :random.uniform() > 0.5
+    :rand.uniform() > 0.5
   end
 end
